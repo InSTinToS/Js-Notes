@@ -2,15 +2,16 @@ import { dark, light, ThemeAttributes } from 'styles/themes'
 
 import { createSlice } from '@reduxjs/toolkit'
 
-const localTheme = localStorage.getItem('theme')
+const localTheme = localStorage.getItem('@SLab_theme')
+
+const initialState: ThemeState = localTheme === 'light' || !localTheme ? light : dark
 
 const Theme = createSlice({
   name: 'theme',
-  initialState: localTheme === 'light' || !localTheme ? light : dark,
-
+  initialState,
   reducers: {
     changeTheme: state => {
-      localStorage.setItem('theme', state.name === 'light' ? 'dark' : 'light')
+      localStorage.setItem('@SLab_theme', state.name === 'light' ? 'dark' : 'light')
       return state.name === 'light' ? dark : light
     },
   },
