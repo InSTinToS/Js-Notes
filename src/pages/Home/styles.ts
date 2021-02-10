@@ -1,15 +1,19 @@
 import styled from 'styled-components'
 
 const Style = styled.main`
+  width: 100vw;
+
   color: ${({ theme }) => theme.colors.white};
   background-image: ${({ theme }) =>
-    `linear-gradient(45deg, ${theme.colors.tertiary},${theme.colors.primary})`};
+    `linear-gradient(45deg, ${theme.colors.tertiary}, ${theme.colors.primary})`};
 
   section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    height: 100vh;
+    width: 100vw;
 
     header {
       position: absolute;
@@ -20,20 +24,17 @@ const Style = styled.main`
 
       width: 100%;
       height: 72px;
-      padding: 24px;
     }
 
     .title {
       text-align: center;
-      width: 100%;
-      padding: 16px;
+      width: 100vw;
     }
 
     .Wrapper {
-      width: 100vw;
-
       .Slider .Container {
         height: 70vh;
+        padding: 16px;
 
         color: ${({ theme }) => theme.colors.secondary};
         background-color: ${({ theme }) => theme.colors.white};

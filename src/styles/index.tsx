@@ -11,7 +11,7 @@ export default createGlobalStyle`
   }
   
   html {
-
+    overflow: hidden;
     font-size: 62.5%;
 
     body {

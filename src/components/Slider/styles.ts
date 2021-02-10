@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-interface StyleProps {
+interface SliderStyleProps {
   width: string
 }
 
@@ -18,24 +18,25 @@ export const Container = styled(motion.li)<ContainerProps>`
   }
 `
 
-export const SliderStyle = styled(motion.ul)`
+export const SliderStyle = styled(motion.ul)<SliderStyleProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
-  border: solid green 1px;
+  width: ${({ width }) => width};
 `
 
-const Style = styled.div<StyleProps>`
+const Style = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  overflow-x: hidden;
-  width: ${({ width }) => width};
-  border: solid red 1px;
+  width: 100vw;
+
+  &,
+  ${SliderStyle}, ${Container} {
+    overflow: hidden;
+  }
 `
 
 Style.displayName = 'Slider-Style'

@@ -1,7 +1,7 @@
 import { ThemeAttributes } from './'
 
-const dark: ThemeAttributes = {
-  name: 'dark',
+const light: ThemeAttributes = {
+  name: 'light',
 
   colors: {
     primary: '#fdd734',
@@ -9,7 +9,9 @@ const dark: ThemeAttributes = {
     tertiary: '#d4788d',
     quaternary: '#9c6f4d',
     white: '#fcfcfc',
+    pink: '#ff0080',
+    orange: '#e3996e',
   },
 }
 
-export default dark
+export default light

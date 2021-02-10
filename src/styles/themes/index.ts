@@ -12,5 +12,7 @@ export interface ThemeAttributes {
     tertiary: string
     quaternary: string
     white: string
+    pink: string
+    orange: string
   }
 }

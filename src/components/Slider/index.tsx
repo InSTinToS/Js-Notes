@@ -56,12 +56,10 @@ const Slider: React.FC<SliderProps> = ({
   }
 
   return (
-    <Style
-      className='Wrapper'
-      width={`${containerWidth * containers.length + containerGap * (containers.length - 1)}px`}
-    >
+    <Style className='Wrapper'>
       <SliderStyle
         className='Slider'
+        width={`${containerWidth * containers.length + containerGap * (containers.length - 1)}px`}
         drag='x'
         dragElastic={0}
         dragMomentum={false}

@@ -1,24 +1,9 @@
 import React from 'react'
 import Style from './styles'
 
-import ArrayMap from 'pages/Home/Array/Map'
+import array from './Array'
 
 import Slider from 'components/Slider'
-
-const array = [
-  {
-    component: ArrayMap,
-    key: 'array.map',
-  },
-  {
-    component: ArrayMap,
-    key: 'array.maps',
-  },
-  {
-    component: ArrayMap,
-    key: 'array.mapss',
-  },
-]
 
 const Home: React.FC = () => {
   return (
